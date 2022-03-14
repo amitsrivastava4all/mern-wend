@@ -1,0 +1,143 @@
+function add(){
+    console.log("I am the Add Function ");
+}
+
+
+undefined
+typeof add;
+'function'
+var e= add;
+undefined
+typeof e;
+'function'
+add(); // Call
+VM252:2 I am the Add Function 
+undefined
+function add(){
+    console.log("I am the Add Function ");
+    return; 
+     console.log("I am the Add Function ");
+     console.log("I am the Add Function ");
+}
+
+
+undefined
+add();
+VM450:2 I am the Add Function 
+undefined
+function add(){
+    console.log("I am the Add Function ");
+    return 100; 
+     console.log("I am the Add Function ");
+     console.log("I am the Add Function ");
+}
+
+
+undefined
+add();
+VM492:2 I am the Add Function 
+100
+function add(){
+    console.log("I am the Add Function ");
+    return 
+    100;
+     console.log("I am the Add Function ");
+     console.log("I am the Add Function ");
+}
+
+
+undefined
+add();
+VM537:2 I am the Add Function 
+undefined
+function add(){
+    console.log("I am the Add Function ");
+}
+
+
+undefined
+add(10,20);
+VM585:2 I am the Add Function 
+undefined
+add(10,"20");
+VM585:2 I am the Add Function 
+undefined
+add(10,"20",30,40);
+VM585:2 I am the Add Function 
+undefined
+add(10,"20",30,40,[100,200]);
+VM585:2 I am the Add Function 
+undefined
+add(10,"20",30,40,[100,200], function(){});
+VM585:2 I am the Add Function 
+undefined
+function add(){
+    console.log(' I am add ');
+}
+undefined
+add(10,20);
+VM933:2  I am add 
+undefined
+function add(x,y){
+    return x + y;
+}
+undefined
+add(10,20);
+30
+add(10,20,30,40);
+30
+console.dir(add);
+VM1182:1 ƒ add(x,y)arguments: nullcaller: nulllength: 2name: "add"prototype: {constructor: ƒ}constructor: ƒ add(x,y)[[Prototype]]: Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()__proto__: (...)get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()[[FunctionLocation]]: VM1044:1[[Prototype]]: ƒ ()[[Scopes]]: Scopes[1]
+undefined
+function add(x,y){
+    console.log(arguments);
+    return x + y;
+}
+undefined
+add(10,20,30,40);
+VM1295:2 Arguments(4) [10, 20, 30, 40, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+30
+add(10,"Amit",true, [10,20,"30",[90,100]]);
+VM1295:2 Arguments(4) [10, 'Amit', true, Array(4), callee: ƒ, Symbol(Symbol.iterator): ƒ]
+'10Amit'
+function add(){
+  console.log(typeof arguments);
+    console.log(arguments instanceof Array);
+}
+undefined
+add(10,20);
+VM1795:2 object
+VM1795:3 false
+undefined
+function add(){
+  //console.log(typeof arguments);
+   // console.log(arguments instanceof Array);
+    var sum = 0;
+    for(var i = 0; i<arguments.length;i++){
+        sum =sum + arguments[i];
+    }
+    return sum;
+}
+undefined
+add(1);
+1
+add();
+0
+add(1,2,3);
+6
+add(1,2,3,4,5,6,7,8,9,10);
+55
+add(1,2,3,4,5,6,7,8,"9",10);
+'36910'
+function add(){
+  //console.log(typeof arguments);
+   // console.log(arguments instanceof Array);
+    var sum = 0;
+    for(var i = 0; i<arguments.length;i++){
+        sum =sum + parseInt(arguments[i]);
+    }
+    return sum;
+}
+undefined
+add(1,2,3,4,5,6,7,8,"9",10);
+55

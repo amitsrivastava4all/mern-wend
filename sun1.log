@@ -1,0 +1,72 @@
+var a = "Amit";
+undefined
+typeof a;
+'string'
+var a2 = new String("Amit");
+undefined
+a2;
+String {'Amit'}0: "A"1: "m"2: "i"3: "t"length: 4[[Prototype]]: String[[PrimitiveValue]]: "Amit"
+typeof a2;
+'object'
+a2 instanceof String;
+true
+typeof String;
+'function'
+a2.charAt(0);
+'A'
+a2.toUpperCase();
+'AMIT'
+String.prototype.charAt;
+ƒ charAt() { [native code] }
+String.prototype.toUpperCase;
+ƒ toUpperCase() { [native code] }
+a;
+'Amit'
+function abcd(){}
+undefined
+typeof abcd;
+'function'
+abcd.prototype;
+{constructor: ƒ}
+typeof abcd.prototype;
+'object'
+typeof abcd;
+'function'
+var b = "Amit";
+undefined
+var d = 100;
+undefined
+d = true;
+true
+d = [10,20,30];
+(3) [10, 20, 30]
+typeof d;
+'object'
+10 == "10"
+true
+10 === "10"
+false
+NaN == NaN;
+false
+typeof NaN;
+'number'
+var arr = [10,20,30,40];
+undefined
+typeof arr;
+'object'
+arr = null;
+null
+typeof arr;
+'object'
+undefined == null;
+true
+undefined === null;
+false
+10  + true;
+11
+1 == true;
+true
+10 + "Amit";
+'10Amit'
+10 == "10"
+true
