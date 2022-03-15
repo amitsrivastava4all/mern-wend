@@ -1,0 +1,14 @@
+Functions Arguments are Optional, We need to Treat it.
+a) default arguments (es6)
+b) truthy and falsy 
+1. N Argument Receive
+2. Any Type of Argument (Loosely Typed)
+
+To Receive the Arguments to the function
+Function has arguments internally attach as a property. 
+
+
+Function Hoisting
+
+JS - Pass 1
+Pass2 
