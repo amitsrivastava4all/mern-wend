@@ -1,0 +1,479 @@
+function show(){
+    console.log("I am Show ");
+}
+undefined
+typeof show;
+'function'
+show(); // Call
+VM190:2 I am Show 
+undefined
+function add(x,y){
+    return x + y;
+}
+undefined
+add(10,20);
+30
+add("Amit" , "Srivastava");
+'AmitSrivastava'
+add(true, true);
+2
+add(10,20,30,40,50,5);
+30
+console.dir(add);
+VM746:1 ƒ add(x,y)arguments: nullcaller: nulllength: 2name: "add"prototype: {constructor: ƒ}[[FunctionLocation]]: VM332:1[[Prototype]]: ƒ ()[[Scopes]]: Scopes[1]
+undefined
+add;
+ƒ add(x,y){
+    return x + y;
+}
+add;
+ƒ add(x,y){
+    return x + y;
+}
+typeof add;
+'function'
+add.name;
+'add'
+add.length;
+2
+add(10);
+NaN
+10 + undefined;
+NaN
+10 + 0;
+10
+10 +1;
+11
+function add(x,y){
+    return x + y;
+}
+undefined
+function add(x=0,y=0){
+    return x + y;
+}
+undefined
+add(10);
+10
+add(10, 20);
+30
+add(10, 20);
+30
+function add(x,y){
+        return x + y;
+}
+undefined
+add();
+NaN
+function add(x=0,y=0){
+        return x + y;
+}
+undefined
+add(10);
+10
+add();
+0
+function add(x=0,y=0){
+        console.log('X is ',x , 'Y is ',y);
+        return x + y;
+}
+undefined
+add();
+VM1403:2 X is  0 Y is  0
+0
+add(10);
+VM1403:2 X is  10 Y is  0
+10
+add(10,20);
+VM1403:2 X is  10 Y is  20
+30
+function add(x,y){
+        console.log('X is ',x , 'Y is ',y);
+        return x + y;
+}
+undefined
+add();
+VM1493:2 X is  undefined Y is  undefined
+NaN
+add(10);
+VM1493:2 X is  10 Y is  undefined
+NaN
+add(10,20);
+VM1493:2 X is  10 Y is  20
+30
+function add(x,y){
+        if(typeof x ==='undefined'){x = 0;}
+    if(typeof y ==='undefined'){y = 0;}
+        console.log('X is ',x , 'Y is ',y);
+        return x + y;
+}
+undefined
+add();
+VM1706:4 X is  0 Y is  0
+0
+add(10);
+VM1706:4 X is  10 Y is  0
+10
+add(10,NaN);
+VM1706:4 X is  10 Y is  NaN
+NaN
+var myName = "";
+undefined
+if(myName){
+    console.log("Truthy");
+}
+else{
+console.log("Falsy ");
+    
+}
+VM2117:5 Falsy 
+undefined
+myName=0;
+0
+if(myName){
+    console.log("Truthy");
+}
+else{
+console.log("Falsy ");
+    
+}
+VM2143:5 Falsy 
+undefined
+myName = undefined;
+undefined
+if(myName){
+    console.log("Truthy");
+}
+else{
+console.log("Falsy ");
+    
+}
+VM2184:5 Falsy 
+undefined
+myName = null;
+null
+if(myName){
+    console.log("Truthy");
+}
+else{
+console.log("Falsy ");
+    
+}
+VM2232:5 Falsy 
+undefined
+myName = NaN;
+NaN
+if(myName){
+    console.log("Truthy");
+}
+else{
+console.log("Falsy ");
+    
+}
+VM2275:5 Falsy 
+undefined
+myName = false;
+false
+if(myName){
+    console.log("Truthy");
+}
+else{
+console.log("Falsy ");
+    
+}
+VM2315:5 Falsy 
+undefined
+myName  = "amit";
+'amit'
+if(myName){
+    console.log("Truthy");
+}
+else{
+console.log("Falsy ");
+    
+}
+VM2362:2 Truthy
+undefined
+myName = 11;
+11
+if(myName){
+    console.log("Truthy");
+}
+else{
+console.log("Falsy ");
+    
+}
+VM2402:2 Truthy
+undefined
+myName = [];
+[]
+if(myName){
+    console.log("Truthy");
+}
+else{
+console.log("Falsy ");
+    
+}
+VM2449:2 Truthy
+undefined
+function add(x,y){
+        x = x || 0;
+        y = y || 0;
+        return x + y;
+}
+undefined
+add(10,20);
+30
+add(1);
+1
+add();
+0
+true || 100;
+true
+false || 100;
+100
+add(NaN, 100);
+100
+100 + null;
+100
+add(null, null);
+0
+var name = null;
+undefined
+'Welcome '+name;
+'Welcome null'
+var name = null || "";
+undefined
+'Welcome '+name;
+'Welcome '
+var e = "1000":
+VM3136:1 Uncaught SyntaxError: Unexpected token ':'
+var e = "1000";
+undefined
+typeof e;
+'string'
+e + 9999;
+'10009999'
+parseInt(e) + 9999;
+10999
+e;
+'1000'
++e;
+1000
+10 + +"20"
+30
+e = 1000.20;
+1000.2
+typeof e;
+'number'
+typeof parseInt("1000");
+'number'
+ parseInt("1000.333");
+1000
+var r = 100000n;
+undefined
+typeof r;
+'bigint'
+function add(){
+    console.log("I am the Add ");
+}
+undefined
+add(10,20,30,40,50);
+VM3666:2 I am the Add 
+undefined
+add(10,[20,30],"40",50);
+VM3666:2 I am the Add 
+undefined
+console.dir(add);
+VM3896:1 ƒ add()arguments: nullcaller: nulllength: 0name: "add"prototype: {constructor: ƒ}[[FunctionLocation]]: VM3666:1[[Prototype]]: ƒ ()[[Scopes]]: Scopes[1]
+undefined
+function add(){
+    console.log(arguments.length);
+    //console.log("I am the Add ");
+}
+undefined
+add();
+VM4027:2 0
+undefined
+add(10);
+VM4027:2 1
+undefined
+add(10,20);
+VM4027:2 2
+undefined
+add(10,20,30);
+VM4027:2 3
+undefined
+add(10,20,30,40);
+VM4027:2 4
+undefined
+function add(){
+    //console.log(arguments.length);
+    //console.log("I am the Add ");
+    var sum= 0;
+    for(var i = 0; i<arguments.length; i++){
+        sum= sum+ arguments[i];
+    }
+    return sum;
+}
+undefined
+add();
+0
+add(1,2);
+3
+add(1,2,3);
+6
+add(1,2,3,4);
+10
+add(1,2,3,4,5);
+15
+add(1,2,3,"4",5);
+'645'
+function add(){
+    //console.log(arguments.length);
+    //console.log("I am the Add ");
+    var sum= 0;
+    for(var i = 0; i<arguments.length; i++){
+        sum= sum+ parseInt(arguments[i]);
+    }
+    return sum;
+}
+undefined
+add(1,2,3,"4",5);
+15
+add(1,2,3,"four",5);
+NaN
+parseInt("Amit");
+NaN
+parseInt("111");
+111
+isNaN(parseInt("Amit"));
+true
+isNaN(parseInt("Amit"))?0:1;
+0
+function add(){
+    //console.log(arguments.length);
+    //console.log("I am the Add ");
+    var sum= 0;
+    for(var i = 0; i<arguments.length; i++){
+        sum= sum+ isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]);
+    }
+    return sum;
+}
+undefined
+add(1,2,3,"four",5);
+5
+function add(){
+    //console.log(arguments.length);
+    //console.log("I am the Add ");
+    var sum= 0;
+    for(var i = 0; i<arguments.length; i++){
+        sum= sum+ (isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]));
+    }
+    return sum;
+}
+undefined
+add(1,2,3,"four",5);
+11
+function add(){
+    //console.log(arguments.length);
+    //console.log("I am the Add ");
+    var sum= 0;
+    for(var i = 0; i<arguments.length; i++){
+        sum= sum+ (parseInt(arguments[i]) || 0);
+    }
+    return sum;
+}
+undefined
+add(1,2,3,"four",5);
+11
+function add(...a ){
+    //console.log(arguments.length);
+    //console.log("I am the Add ");
+    var sum= 0;
+    for(var i = 0; i<a.length; i++){
+        sum= sum+ (parseInt(a[i]) || 0);
+    }
+    return sum;
+}
+undefined
+add(10,20,"30","one");
+60
+function add(...a ){
+    console.log('REST ',typeof a);
+    console.log('Arguments ', typeof arguments);
+    //console.log(arguments.length);
+    //console.log("I am the Add ");
+    var sum= 0;
+    for(var i = 0; i<a.length; i++){
+        sum= sum+ (parseInt(a[i]) || 0);
+    }
+    return sum;
+}
+undefined
+add(10,20,30);
+VM5330:2 REST  object
+VM5330:3 Arguments  object
+60
+function add(...a ){
+    console.log('REST ',typeof a, a instanceof Array, a);
+    console.log('Arguments ', typeof arguments, arguments instanceof Array, arguments);
+    //console.log(arguments.length);
+    //console.log("I am the Add ");
+    var sum= 0;
+    for(var i = 0; i<a.length; i++){
+        sum= sum+ (parseInt(a[i]) || 0);
+    }
+    return sum;
+}
+undefined
+add(10,20,30);
+VM5771:2 REST  object true (3) [10, 20, 30]0: 101: 202: 30length: 3[[Prototype]]: Array(0)at: ƒ at()concat: ƒ concat()constructor: ƒ Array()copyWithin: ƒ copyWithin()entries: ƒ entries()every: ƒ every()fill: ƒ fill()filter: ƒ filter()find: ƒ find()findIndex: ƒ findIndex()findLast: ƒ findLast()findLastIndex: ƒ findLastIndex()flat: ƒ flat()flatMap: ƒ flatMap()forEach: ƒ forEach()includes: ƒ includes()indexOf: ƒ indexOf()join: ƒ join()keys: ƒ keys()lastIndexOf: ƒ lastIndexOf()length: 0map: ƒ map()pop: ƒ pop()push: ƒ push()reduce: ƒ reduce()reduceRight: ƒ reduceRight()reverse: ƒ reverse()shift: ƒ shift()slice: ƒ slice()some: ƒ some()sort: ƒ sort()splice: ƒ splice()toLocaleString: ƒ toLocaleString()toString: ƒ toString()unshift: ƒ unshift()values: ƒ values()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.unscopables): {copyWithin: true, entries: true, fill: true, find: true, findIndex: true, …}[[Prototype]]: Object
+VM5771:3 Arguments  object false Arguments(3) [10, 20, 30, callee: (...), Symbol(Symbol.iterator): ƒ]0: 101: 202: 30callee: (...)length: 3Symbol(Symbol.iterator): ƒ values()get callee: ƒ ()set callee: ƒ ()[[Prototype]]: Object
+60
+var ww = [10,20,30,40,50];
+undefined
+var ff = [100,77,22,50];
+undefined
+var f = [ww, ff];
+undefined
+f;
+(2) [Array(5), Array(4)]0: (5) [10, 20, 30, 40, 50]1: (4) [100, 77, 22, 50]length: 2[[Prototype]]: Array(0)
+f;
+(2) [Array(5), Array(4)]
+ww;
+(5) [10, 20, 30, 40, 50]
+ff;
+(4) [100, 77, 22, 50]
+ww[0] = 1111;
+1111
+ww;
+(5) [1111, 20, 30, 40, 50]
+f;
+(2) [Array(5), Array(4)]0: (5) [1111, 20, 30, 40, 50]1: (4) [100, 77, 22, 50]length: 2[[Prototype]]: Array(0)
+f[0][0] = 7777;
+7777
+ww;
+(5) [7777, 20, 30, 40, 50]
+var bb = [...ww, ...ff];
+undefined
+bb;
+(9) [7777, 20, 30, 40, 50, 100, 77, 22, 50]
+ww;
+(5) [7777, 20, 30, 40, 50]
+ww[0] = 1234;
+1234
+ww;
+(5) [1234, 20, 30, 40, 50]
+bb;
+(9) [7777, 20, 30, 40, 50, 100, 77, 22, 50]
+test(); 
+function test(){
+
+    console.log("I am a Test ");
+}
+VM6466:4 I am a Test 
+undefined
+var q = function(){}
+undefined
+typeof q;
+'function'
