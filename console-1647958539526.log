@@ -1,0 +1,13 @@
+show();
+function show(){
+    console.log("I am Show ");
+}
+VM208:3 I am Show 
+undefined
+t(); 
+var t = function(){
+    console.log("I am F.E ");
+}
+VM444:1 Uncaught TypeError: t is not a function
+    at <anonymous>:1:1
+(anonymous) @ VM444:1
