@@ -1,0 +1,108 @@
+var names = ["amit","ajay","ram", "anil","ramesh","ajit"];
+undefined
+"amit" - "ajay"
+NaN
+"amit".localeCompare("ajay");
+1
+"ajay".localeCompare("amit");
+-1
+"amit".localeCompare("amit");
+0
+names.sort((first, second)=> first.localeCompare(second));
+(6) ['ajay', 'ajit', 'amit', 'anil', 'ram', 'ramesh']
+var customers = [{id:1001, name:'Ram', salary:9999}, {id:1002, name:'Shyam', salary:7777}, {id:1003, name:'Mike', salary:66666}];
+
+
+
+
+
+
+
+
+undefined
+JSON.stringify(customers);
+'[{"id":1001,"name":"Ram","salary":9999},{"id":1002,"name":"Shyam","salary":7777},{"id":1003,"name":"Mike","salary":66666}]'
+var e =JSON.stringify(customers);
+undefined
+typeof e;
+'string'
+JSON.parse(e);
+(3) [{…}, {…}, {…}]0: {id: 1001, name: 'Ram', salary: 9999}1: {id: 1002, name: 'Shyam', salary: 7777}2: {id: 1003, name: 'Mike', salary: 66666}length: 3[[Prototype]]: Array(0)
+var w = {1:'abcd'};
+undefined
+customers;
+(3) [{…}, {…}, {…}]0: {id: 1001, name: 'Ram', salary: 9999}1: {id: 1002, name: 'Shyam', salary: 7777}2: {id: 1003, name: 'Mike', salary: 66666}length: 3[[Prototype]]: Array(0)
+e;
+'[{"id":1001,"name":"Ram","salary":9999},{"id":1002,"name":"Shyam","salary":7777},{"id":1003,"name":"Mike","salary":66666}]'
+var w = {a:function(){}};
+undefined
+JSON.stringify(w);
+'{}'
+customers;
+(3) [{…}, {…}, {…}]0: {id: 1001, name: 'Ram', salary: 9999}1: {id: 1002, name: 'Shyam', salary: 7777}2: {id: 1003, name: 'Mike', salary: 66666}length: 3[[Prototype]]: Array(0)
+customers.sort((first, second)=>first.salary-second.salary);
+(3) [{…}, {…}, {…}]0: {id: 1002, name: 'Shyam', salary: 7777}1: {id: 1001, name: 'Ram', salary: 9999}2: {id: 1003, name: 'Mike', salary: 66666}length: 3[[Prototype]]: Array(0)
+var e = 100;
+undefined
+var e = ["amit","ram","shyam", "mike", "tim"];
+undefined
+e.sort();
+(5) ['amit', 'mike', 'ram', 'shyam', 'tim']
+var e1 = [10,1,201, 22, 9,7,8];
+undefined
+e1.sort();
+(7) [1, 10, 201, 22, 7, 8, 9]
+var prices = [9000,8888,4444,3333,2222,1111,55555];
+undefined
+var pricesWithGst= prices.map(price=>price+price*0.18);
+undefined
+pricesWithGst;
+(7) [10620, 10487.84, 5243.92, 3932.94, 2621.96, 1310.98, 65554.9]
+prices;
+(7) [9000, 8888, 4444, 3333, 2222, 1111, 55555]
+var priceClone= prices.map(price=>price);
+undefined
+priceClone;
+(7) [9000, 8888, 4444, 3333, 2222, 1111, 55555]
+prices;
+(7) [9000, 8888, 4444, 3333, 2222, 1111, 55555]
+var priceClone= prices.map(price=>true);
+undefined
+priceClone;
+(7) [true, true, true, true, true, true, true]
+prices;
+(7) [9000, 8888, 4444, 3333, 2222, 1111, 55555]
+var p = 90000;
+undefined
+p.toLocaleString('hi-IN');
+'90,000'
+p;
+90000
+p.toLocaleString('fr-FR);
+VM2795:1 Uncaught SyntaxError: Invalid or unexpected token
+p.toLocaleString('fr-FR');
+'90 000'
+prices;
+(7) [9000, 8888, 4444, 3333, 2222, 1111, 55555]
+prices.map(price=>price.toLocaleString('hi-IN'));
+(7) ['9,000', '8,888', '4,444', '3,333', '2,222', '1,111', '55,555']
+var w = '&#8377;'
+undefined
+w;
+'&#8377;'
+document.body.innerHTML = w;
+'&#8377;'
+console.log(w);
+VM3217:1 &#8377;
+undefined
+prices.map(price=>`Rs ${price.toLocaleString('hi-IN')}`);
+(7) ['Rs 9,000', 'Rs 8,888', 'Rs 4,444', 'Rs 3,333', 'Rs 2,222', 'Rs 1,111', 'Rs 55,555']
+prices;
+(7) [9000, 8888, 4444, 3333, 2222, 1111, 55555]
+var sum = 0;
+for(var i = 0; i<prices.length; i++){
+    sum = sum + prices[i];
+}
+84553
+prices.reduce((acc,price)=>acc+price, 0);
+84553
