@@ -1,0 +1,21 @@
+var arr = [10,20,30,40,50];
+undefined
+arr.reduce((acc, element)=>acc+element);
+150
+arr.reduce((acc, element)=>acc+element, acc=0);
+150
+arr.reduce((acc, element)=>{
+    if(element>20){
+        acc.push(element);
+    }
+    return acc;
+}, acc=[]);
+(3) [30, 40, 50]
+arr.every(element=>element>1);
+true
+arr.every(element=>element>20);
+false
+arr;
+(5) [10, 20, 30, 40, 50]
+arr.some(element=>element>20);
+true

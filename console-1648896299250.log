@@ -1,0 +1,450 @@
+function init(){
+    var count = 0;
+    const counter = function(){
+        return ++count;
+    }
+    return counter; 
+}
+undefined
+var d = init();
+undefined
+typeof d;
+'function'
+d();
+1
+d();
+2
+d();
+3
+d();
+4
+d();
+5
+var d = init();
+undefined
+d();
+1
+d();
+2
+d();
+3
+d();
+4
+(function init2(){
+    console.log("I Called ");
+    var count = 0;
+    const counter = function(){
+        return ++count;
+    }
+    return counter; 
+})();
+VM585:2 I Called 
+ƒ (){
+        return ++count;
+    }
+init2();
+VM605:1 Uncaught ReferenceError: init2 is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM605:1
+var f =(function init2(){
+    console.log("I Called ");
+    var count = 0;
+    const counter = function(){
+        return ++count;
+    }
+    return counter; 
+})();
+VM629:2 I Called 
+undefined
+f();
+1
+f();
+2
+f();
+3
+f();
+4
+f();
+5
+f();
+6
+var t = (function(){
+var x,y;
+function sin(){}
+    function cos(){}
+    return {sin, cos};
+    
+})();
+undefined
+function loop(){
+    // var j ; // j initialize undefined
+    // J Scope Function Level
+    console.log(j);
+for(var j =1 ; j<=10; j++){
+    console.log(j);
+}
+    console.log(j);
+}
+undefined
+loop();
+VM1303:4 undefined
+VM1303:6 1
+VM1303:6 2
+VM1303:6 3
+VM1303:6 4
+VM1303:6 5
+VM1303:6 6
+VM1303:6 7
+VM1303:6 8
+VM1303:6 9
+VM1303:6 10
+VM1303:8 11
+undefined
+function loop(){
+    // var j ; // j initialize undefined
+    // J Scope Function Level
+    console.log(j);
+    (function(){
+for(var j =1 ; j<=10; j++){
+    console.log(j);
+}
+    })();
+    console.log(j);
+}
+undefined
+loop();
+VM1405:4 Uncaught ReferenceError: j is not defined
+    at loop (<anonymous>:4:17)
+    at <anonymous>:1:1
+loop @ VM1405:4
+(anonymous) @ VM1431:1
+function show(){
+    console.log(i);
+    for(let i = 1; i<=10; i++){
+        console.log(i);
+    }
+}
+undefined
+show();
+function show(){
+    console.log("I am Show ");
+}
+VM1649:3 I am Show 
+undefined
+function show(){
+    console.log(i);
+    for(let i = 1; i<=10; i++){
+        console.log(i);
+    }
+}
+undefined
+show();
+VM1692:2 Uncaught ReferenceError: i is not defined
+    at show (<anonymous>:2:17)
+    at <anonymous>:1:1
+show @ VM1692:2
+(anonymous) @ VM1716:1
+function show(){
+    console.log(i);
+    for(let i = 1; i<=10; i++){
+        console.log(i);
+        if(i==5){
+            console.log('If i ', i);
+            let i = 20;
+            console.log('I am If i ',i);
+        }
+    }
+}
+undefined
+show();
+VM2034:2 Uncaught ReferenceError: i is not defined
+    at show (<anonymous>:2:17)
+    at <anonymous>:1:1
+show @ VM2034:2
+(anonymous) @ VM2056:1
+function show(){
+    //console.log(i);
+    for(let i = 1; i<=10; i++){
+        console.log(i);
+        if(i==5){
+            console.log('If i ', i);
+            let i = 20;
+            console.log('I am If i ',i);
+        }
+    }
+}
+undefined
+show();
+VM2068:4 1
+VM2068:4 2
+VM2068:4 3
+VM2068:4 4
+VM2068:4 5
+VM2068:6 Uncaught ReferenceError: Cannot access 'i' before initialization
+    at show (<anonymous>:6:34)
+    at <anonymous>:1:1
+show @ VM2068:6
+(anonymous) @ VM2091:1
+function show(){
+    //console.log(i);
+    for(let i = 1; i<=10; i++){
+        console.log(i);
+        if(i==5){
+            console.log('If i ', i);
+            let i = 20;
+            console.log('I am If i ',i);
+            let i = 30;
+        }
+    }
+}
+VM2123:9 Uncaught SyntaxError: Identifier 'i' has already been declared
+function show(){
+    //console.log(i);
+    for(let i = 1; i<=10; i++){
+        console.log(i);
+        if(i==5){
+            //console.log('If i ', i);
+            let i = 20;
+            console.log('I am If i ',i);
+            let i = 30;
+        }
+    }
+}
+VM2134:9 Uncaught SyntaxError: Identifier 'i' has already been declared
+function show(){
+    //console.log(i);
+    for(let i = 1; i<=10; i++){
+        console.log(i);
+        if(i==5){
+            console.log('If i ', i);
+            let i = 20;
+            console.log('I am If i ',i);
+            //let i = 30;
+        }
+    }
+}
+undefined
+show();
+VM2150:4 1
+VM2150:4 2
+VM2150:4 3
+VM2150:4 4
+VM2150:4 5
+VM2150:6 Uncaught ReferenceError: Cannot access 'i' before initialization
+    at show (<anonymous>:6:34)
+    at <anonymous>:1:1
+show @ VM2150:6
+(anonymous) @ VM2160:1
+function show(){
+    //console.log(i);
+    for(let i = 1; i<=10; i++){
+        console.log(i);
+        if(i==5){
+           // console.log('If i ', i);
+            let i = 20;
+            console.log('I am If i ',i);
+        }
+    }
+}
+undefined
+show();
+VM2176:4 1
+VM2176:4 2
+VM2176:4 3
+VM2176:4 4
+VM2176:4 5
+VM2176:8 I am If i  20
+VM2176:4 6
+VM2176:4 7
+VM2176:4 8
+VM2176:4 9
+VM2176:4 10
+undefined
+function show(){
+    console.log(i);
+    for(var i = 1; i<=10; i++){
+        console.log(i);
+        if(i==5){
+           // console.log('If i ', i);
+            let i = 20;
+            console.log('I am If i ',i);
+        }
+    }
+    console.log(i);
+}
+undefined
+show();
+VM2265:2 undefined
+VM2265:4 1
+VM2265:4 2
+VM2265:4 3
+VM2265:4 4
+VM2265:4 5
+VM2265:8 I am If i  20
+VM2265:4 6
+VM2265:4 7
+VM2265:4 8
+VM2265:4 9
+VM2265:4 10
+VM2265:11 11
+undefined
+function show(){
+    console.log(i);
+    for(var i = 1; i<=10; i++){
+        console.log(i);
+        if(i==5){
+           // console.log('If i ', i);
+            var i = 20;
+            console.log('I am If i ',i);
+        }
+    }
+    console.log(i);
+}
+undefined
+show();
+VM2311:2 undefined
+VM2311:4 1
+VM2311:4 2
+VM2311:4 3
+VM2311:4 4
+VM2311:4 5
+VM2311:8 I am If i  20
+VM2311:11 21
+undefined
+function show(){
+    console.log(i);
+    for(let i = 1; i<=10; i++){
+        console.log(i);
+        if(i==5){
+           // console.log('If i ', i);
+            var i = 20;
+            console.log('I am If i ',i);
+        }
+    }
+    console.log(i);
+}
+VM2376:7 Uncaught SyntaxError: Identifier 'i' has already been declared
+function show(){
+    console.log(i);
+    for(var i = 1; i<=10; i++){
+        console.log(i);
+        if(i==5){
+           // console.log('If i ', i);
+            let i = 20;
+            console.log('I am If i ',i);
+        }
+    }
+    console.log(i);
+}
+undefined
+function show(){
+    console.log(i);
+    for(let i = 1; i<=10; i++){
+        console.log(i);
+        if(i==5){
+           // console.log('If i ', i);
+            var i = 20;
+            console.log('I am If i ',i);
+        }
+    }
+    console.log(i);
+}
+VM2434:7 Uncaught SyntaxError: Identifier 'i' has already been declared
+function cube(num){
+    for(let i = 1; i<=1000000; i++){
+        
+    }
+    return num**3;
+}
+undefined
+function cube(num){
+    for(let i = 1; i<=1000000; i++){
+        
+    }
+    return num**3;
+}
+undefined
+cube(3);
+27
+function cube(num){
+    for(let i = 1; i<=1000000; i++){
+            for(let j = 1; j<=100000; j++){}
+    }
+    return num**3;
+}
+undefined
+cube(3);
+27
+function cube(num){
+    console.log("Cube Start ",num);
+    for(let i = 1; i<=1000000; i++){
+            for(let j = 1; j<=100000; j++){}
+    }
+    console.log("Cube Ends ", num);
+    return num**3;
+}
+undefined
+cube(3);
+VM2941:2 Cube Start  3
+VM2941:6 Cube Ends  3
+27
+function cube(num){
+    for(let i = 1; i<=100000; i++){
+            for(let j = 1; j<=10000; j++){}
+    }
+    console.log( num**3);
+}
+undefined
+cube(5);
+VM2965:5 125
+undefined
+function cube(num){
+    for(let i = 1; i<=1000000; i++){
+            for(let j = 1; j<=10000; j++){}
+    }
+    console.log( num**3);
+}
+undefined
+cube(5);
+VM2999:5 125
+undefined
+var cache = {};
+undefined
+function cube(num){
+    if(cache[num]){
+        console.log(cache[num]);
+        return ;
+    }
+    for(let i = 1; i<=1000000; i++){
+            for(let j = 1; j<=100000; j++){}
+    }
+    let result = num**3;
+    cache[num] = result;
+    console.log( result);
+}
+undefined
+cube(10);
+VM3443:11 1000
+undefined
+cache;
+
+
+{10: 1000}
+Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+cube(10);
+VM3443:3 1000
+undefined
+function show(){
+    //console.log(i);
+    for(let i = 1; i<=10; i++){
+        console.log(i);
+        if(i==5){
+           // console.log('If i ', i);
+            
+            console.log('I am If i ',i);
+        }
+    }
+    console.log(i);
+}
+undefined
