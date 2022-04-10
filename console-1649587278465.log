@@ -1,0 +1,145 @@
+var obj = {id:1001 ,name:'Abcd'};
+undefined
+function createProduct(id, name, price, desc, url){
+    var product = {};
+    product.id = id;
+    product.name = name;
+    product.price = price;
+    product.desc = desc;
+    product.url = url;
+    return product;
+}
+undefined
+var p = createProduct(1001, "a", 9000,"abcd","a.jpg");
+undefined
+p;
+{id: 1001, name: 'a', price: 9000, desc: 'abcd', url: 'a.jpg'}
+typeof p;
+'object'
+p instanceof Object;
+true
+p instanceof createProduct;
+false
+function Product(){
+    console.log("I am this ",this);
+}
+undefined
+Product(); // window.Product(); 
+VM1147:2 I am this  Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+undefined
+var p = new Product();
+VM1147:2 I am this  Product {}
+undefined
+p instanceof Product;
+true
+p instanceof Object;
+true
+function Product(id ,name ,desc , url){
+    console.log("I am this ",this);
+    this.id = id;
+    this.name = name;
+    this.url = url;
+    this.desc  = desc;
+    
+}
+undefined
+var p2 = new Product(1001, "A", "ABCD","A.jpg");
+VM1571:2 I am this  Product {}
+undefined
+p2;
+Product {id: 1001, name: 'A', url: 'A.jpg', desc: 'ABCD'}
+Product(); // window.Product(); 
+VM1571:2 I am this  Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+undefined
+p2;
+Product {id: 1001, name: 'A', url: 'A.jpg', desc: 'ABCD'}desc: "ABCD"id: 1001name: "A"url: "A.jpg"[[Prototype]]: Object
+p2.__proto__;
+{constructor: ƒ}
+typeof Product;
+'function'
+Product.prototype;
+{constructor: ƒ}
+typeof Product.prototype;
+'object'
+function Emp(){
+    
+}
+undefined
+Emp.prototype
+{constructor: ƒ}
+typeof Emp.prototype;
+'object'
+Emp.prototype.constructor;
+ƒ Emp(){
+    
+}
+Emp.prototype.constructor === Emp;
+true
+function Emp(id, name, salary){
+    this.id = id;
+    this.name = name;
+    this.salary = salary;
+}
+undefined
+var ram = new Emp(1001, "Ram",9999);
+undefined
+function Emp(id, name, salary){
+    this.id = id;
+    this.name = name;
+    this.salary = salary;
+    this.print = function(){
+        console.log(`Id ${this.id} Name ${this.name} Salary ${this.salary}`);
+    }
+}
+undefined
+var ram = new Emp(1001, "Ram",9999);
+undefined
+ram.print();
+VM2656:6 Id 1001 Name Ram Salary 9999
+undefined
+ram;
+Emp {id: 1001, name: 'Ram', salary: 9999, print: ƒ}
+var shyam = new Emp(1002, "Shyam",19999);
+undefined
+shyam;
+Emp {id: 1002, name: 'Shyam', salary: 19999, print: ƒ}
+shyam.__proto__ == Emp.prototype;
+true
+ram.__proto__ == Emp.prototype;
+true
+shyam.__proto__ == ram.__proto__;
+true
+function Emp(id, name, salary){
+    this.id = id;
+    this.name = name;
+    this.salary = salary;
+    
+}
+Emp.prototype.print = function(){
+        console.log(`Id ${this.id} Name ${this.name} Salary ${this.salary}`);
+    }
+ƒ (){
+        console.log(`Id ${this.id} Name ${this.name} Salary ${this.salary}`);
+    }
+var ram = new Emp(1001, "Ram",9999);
+undefined
+ram;
+Emp {id: 1001, name: 'Ram', salary: 9999}
+var shyam = new Emp(1002, "Shyam",19999);
+undefined
+shyam;
+Emp {id: 1002, name: 'Shyam', salary: 19999}
+ram.__proto__;
+{print: ƒ, constructor: ƒ}
+ram.__proto__.print;
+ƒ (){
+        console.log(`Id ${this.id} Name ${this.name} Salary ${this.salary}`);
+    }
+ram.__proto__.print();
+VM3129:8 Id undefined Name undefined Salary undefined
+undefined
+ram.print();
+VM3129:8 Id 1001 Name Ram Salary 9999
+undefined
+ram;
+Emp {id: 1001, name: 'Ram', salary: 9999}id: 1001name: "Ram"salary: 9999[[Prototype]]: Objectprint: ƒ ()constructor: ƒ Emp(id, name, salary)[[Prototype]]: Object
