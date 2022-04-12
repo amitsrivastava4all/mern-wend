@@ -1,0 +1,21 @@
+Create a Function named called Student , and this function will take roll no, name , 3 subject marks
+Write these function which compute total marks, grade and percentage 
+Also add a function called printReportCard , which print the student report card
+this will print report card in following manner
+
+Assuming User might be enter the name in this form
+e.g raM kuMAr SHARma
+MarkSheet of School (DPS)
+Name : Ram Kumar Sharma
+3 Subject Marks
+Subject 1 = 90
+Subject 2  = 100
+Subject 3 = 95
+
+Total Marks 
+Percentage
+Grade
+
+Note : Try this Question with Function Constructor Approach along with prototype
+Also try the same question with ES6 Class based Approach
+
