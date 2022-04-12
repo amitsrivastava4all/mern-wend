@@ -1,0 +1,36 @@
+class Student{
+    constructor(id, name, salary){
+        this.id = id;
+        this.name = name;
+        this.salary = salary;
+    }
+    print(){
+        console.log(`Id ${this.id} Name ${this.name} 
+Salary ${this.salary}`);
+    }
+}
+undefined
+typeof Student;
+'function'
+Student.prototype
+{constructor: ƒ, print: ƒ}
+var ram = new Student(1001,'Ram',9999);
+undefined
+ram;
+Student {id: 1001, name: 'Ram', salary: 9999}id: 1001name: "Ram"salary: 9999[[Prototype]]: Objectconstructor: class Studentprint: ƒ print()[[Prototype]]: Object
+ram.__proto__;
+{constructor: ƒ, print: ƒ}
+ram.__proto__ == Student.prototype;
+true
+ram.print();
+VM634:8 Id 1001 Name Ram 
+Salary 9999
+undefined
+Student.prototype.disp = function(){
+    console.log('I am Student Disp ');
+}
+ƒ (){
+    console.log('I am Student Disp ');
+}
+Student.prototype;
+{disp: ƒ, constructor: ƒ, print: ƒ}

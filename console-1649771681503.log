@@ -1,0 +1,81 @@
+function Product(id, name, price){
+    this.id = id;
+    this.name = name;
+    this.price = price;
+}
+undefined
+Product.prototype;
+{constructor: ƒ}
+var p = new Product(1001, "Abcd",9999);
+undefined
+p;
+Product {id: 1001, name: 'Abcd', price: 9999}id: 1001name: "Abcd"price: 9999[[Prototype]]: Object
+p.__proto__ == Product.prototype;
+true
+function Product(id, name, price){
+    this.id = id;
+    this.name = name;
+    this.price = price;
+   // this.print = function(){}
+}
+Product.prototype.print = function(){
+    console.log(`Id ${this.id} Name ${this.name} Price ${this.price}`);
+}
+ƒ (){
+    console.log(`Id ${this.id} Name ${this.name} Price ${this.price}`);
+}
+Product.prototype;
+{print: ƒ, constructor: ƒ}
+typeof Product.prototype;
+'object'
+Product.prototype instanceof Object;
+true
+var p2 = new Product(1001, "AAA",9999);
+undefined
+p2;
+Product {id: 1001, name: 'AAA', price: 9999}id: 1001name: "AAA"price: 9999[[Prototype]]: Objectprint: ƒ ()constructor: ƒ Product(id, name, price)[[Prototype]]: Object
+var p3 = new Product(1002, "BBB", 5555);
+undefined
+p3;
+Product {id: 1002, name: 'BBB', price: 5555}id: 1002name: "BBB"price: 5555[[Prototype]]: Objectprint: ƒ ()constructor: ƒ Product(id, name, price)[[Prototype]]: Object
+p2.__proto__ === p3.__proto__;
+true
+p2.__proto__ === Product.prototype
+true
+p3.__proto__ === Product.prototype;
+true
+p2.id;
+1001
+p2.print();
+VM916:8 Id 1001 Name AAA Price 9999
+undefined
+Product.prototype;
+{print: ƒ, constructor: ƒ}
+Product.prototype.x = 10;
+10
+Product.prototype;
+{x: 10, print: ƒ, constructor: ƒ}
+Product.prototype.disp = function(){
+    console.log(Product.prototype.x);
+}
+ƒ (){
+    console.log(Product.prototype.x);
+}
+var p3 = new Product(1002, "BBB", 5555);
+undefined
+p3.x;
+10
+p3;
+Product {id: 1002, name: 'BBB', price: 5555}id: 1002name: "BBB"price: 5555[[Prototype]]: Objectdisp: ƒ ()print: ƒ ()x: 10constructor: ƒ Product(id, name, price)[[Prototype]]: Object
+p3.disp();
+VM1981:2 10
+undefined
+Product.prototype.show = function(){
+    console.log(this.name);
+}
+ƒ (){
+    console.log(this.name);
+}
+p3.show();
+VM2246:2 BBB
+undefined

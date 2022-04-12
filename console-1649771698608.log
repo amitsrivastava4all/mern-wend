@@ -1,0 +1,24 @@
+function Emp(){
+    console.log("I am Emp ", this);
+}
+undefined
+Emp(); // window.Emp();
+VM288:2 I am Emp  Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+undefined
+var e = new Emp(); 
+VM288:2 I am Emp  Emp {}
+undefined
+typeof Emp;
+'function'
+Emp.prototype;
+{constructor: ƒ}
+typeof Emp.prototype;
+'object'
+Emp.prototype.constructor;
+ƒ Emp(){
+    console.log("I am Emp ", this);
+}
+e.__proto__;
+{constructor: ƒ}
+e.__proto__ == Emp.prototype;
+true
