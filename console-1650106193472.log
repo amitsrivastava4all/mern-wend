@@ -1,0 +1,22 @@
+function Emp(id, name, salary){
+    this.id = id;
+    this.name = name;
+    this.salary = salary;
+}
+undefined
+typeof Emp;
+'function'
+Emp.prototype;
+{constructor: ƒ}
+typeof Emp.prototype;
+'object'
+var ram = new Emp(1001, "Ram",999);
+undefined
+typeof ram;
+'object'
+ram;
+Emp {id: 1001, name: 'Ram', salary: 999}
+ram.__proto__;
+{constructor: ƒ}
+ram.__proto__ === Emp.prototype;
+true

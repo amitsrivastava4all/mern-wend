@@ -1,0 +1,281 @@
+class Student{
+    constructor(rollno, name, marks){
+        this.rollno = rollno;
+        this.name = name;
+        this.marks = marks;
+    }
+    total(){
+        return this.marks.reduce((tot, mark)=>tot+mark,tot=0);
+    }
+}
+undefined
+Student.prototype;
+{constructor: ƒ, total: ƒ}
+var ram =new Student(1001, "Ram",[90,88,77]);
+undefined
+ram.total();
+VM316:8 Uncaught ReferenceError: tot is not defined
+    at Student.total (<anonymous>:8:59)
+    at <anonymous>:1:5
+total @ VM316:8
+(anonymous) @ VM570:1
+class Student{
+    constructor(rollno, name, marks){
+        this.rollno = rollno;
+        this.name = name;
+        this.marks = marks;
+    }
+    total(){
+        return this.marks.reduce((tot, mark)=>tot+mark,tot=0);
+    }
+}
+undefined
+class Student{
+    constructor(rollno, name, marks){
+        this.rollno = rollno;
+        this.name = name;
+        this.marks = marks;
+    }
+    total(){
+        return this.marks.reduce((tot, mark)=>tot+mark,tot=0);
+    }
+}
+undefined
+var ram =new Student(1001, "Ram",[90,88,77]);
+undefined
+ram.total();
+VM599:8 Uncaught ReferenceError: tot is not defined
+    at Student.total (<anonymous>:8:59)
+    at <anonymous>:1:5
+total @ VM599:8
+(anonymous) @ VM615:1
+class Student{
+    constructor(rollno, name, marks){
+        this.rollno = rollno;
+        this.name = name;
+        this.marks = marks;
+    }
+    total(){
+        console.log('Marks ', this.marks);
+        return this.marks.reduce((tot, mark)=>tot+mark,tot=0);
+    }
+}
+undefined
+var ram =new Student(1001, "Ram",[90,88,77]);
+undefined
+ram.total();
+VM828:8 Marks  (3) [90, 88, 77]
+VM828:9 Uncaught ReferenceError: tot is not defined
+    at Student.total (<anonymous>:9:59)
+    at <anonymous>:1:5
+total @ VM828:9
+(anonymous) @ VM844:1
+class Student{
+    constructor(rollno, name, marks){
+        this.rollno = rollno;
+        this.name = name;
+        this.marks = marks;
+    }
+    total(){
+        console.log('Marks ', this.marks);
+        return this.marks.reduce((tot,mark)=>tot+mark,tot=0);
+    }
+}
+undefined
+var ram =new Student(1001, "Ram",[90,88,77]);
+undefined
+ram.total();
+VM860:8 Marks  (3) [90, 88, 77]
+VM860:9 Uncaught ReferenceError: tot is not defined
+    at Student.total (<anonymous>:9:58)
+    at <anonymous>:1:5
+total @ VM860:9
+(anonymous) @ VM876:1
+class Student{
+    constructor(rollno, name, marks){
+        this.rollno = rollno;
+        this.name = name;
+        this.marks = marks;
+    }
+    total(){
+        console.log('Marks ', this.marks, this.marks instanceof Array );
+        return this.marks.reduce((tot,mark)=>tot+mark,tot=0);
+    }
+}
+undefined
+var ram =new Student(1001, "Ram",[90,88,77]);
+undefined
+ram.total();
+VM1107:8 Marks  (3) [90, 88, 77] true
+VM1107:9 Uncaught ReferenceError: tot is not defined
+    at Student.total (<anonymous>:9:58)
+    at <anonymous>:1:5
+total @ VM1107:9
+(anonymous) @ VM1123:1
+class Student{
+    constructor(rollno, name, marks){
+        this.rollno = rollno;
+        this.name = name;
+        this.marks = marks;
+    }
+    total(){
+        console.log('Marks ', this.marks, this.marks instanceof Array );
+        return this.marks.reduce((t,mark)=>t+mark,t=0);
+    }
+}
+undefined
+var ram =new Student(1001, "Ram",[90,88,77]);
+undefined
+ram.total();
+VM1161:8 Marks  (3) [90, 88, 77] true
+VM1161:9 Uncaught ReferenceError: t is not defined
+    at Student.total (<anonymous>:9:52)
+    at <anonymous>:1:5
+total @ VM1161:9
+(anonymous) @ VM1177:1
+class Student{
+    constructor(rollno, name, marks){
+        this.rollno = rollno;
+        this.name = name;
+        this.marks = marks;
+    }
+    total(){
+        console.log('Marks ', this.marks, this.marks instanceof Array );
+        return this.marks.reduce((t,m)=>t+m,t=0);
+    }
+}
+undefined
+var ram =new Student(1001, "Ram",[90,88,77]);
+undefined
+ram.total();
+VM1340:8 Marks  (3) [90, 88, 77] true
+VM1340:9 Uncaught ReferenceError: t is not defined
+    at Student.total (<anonymous>:9:46)
+    at <anonymous>:1:5
+total @ VM1340:9
+(anonymous) @ VM1356:1
+class Student{
+    constructor(rollno, name, marks){
+        this.rollno = rollno;
+        this.name = name;
+        this.marks = marks;
+    }
+    total(){
+        console.log('Marks ', this.marks, this.marks instanceof Array );
+        return this.marks.reduce(function(t, m){
+            return t + m;
+        }, t = 0);
+    }
+}
+undefined
+var ram =new Student(1001, "Ram",[90,88,77]);
+undefined
+ram.total();
+VM1530:8 Marks  (3) [90, 88, 77] true
+VM1530:11 Uncaught ReferenceError: t is not defined
+    at Student.total (<anonymous>:11:14)
+    at <anonymous>:1:5
+total @ VM1530:11
+(anonymous) @ VM1546:1
+class Student{
+    constructor(rollno, name, marks){
+        this.rollno = rollno;
+        this.name = name;
+        this.marks = marks;
+    }
+    total(){
+        console.log('Marks ', this.marks, this.marks instanceof Array );
+        let sum = 0;
+        for(let i = 0; i<marks.length; i++){
+            sum+=marks[i];
+        }
+        return sum;
+    }
+}
+undefined
+var ram =new Student(1001, "Ram",[90,88,77]);
+undefined
+ram.total();
+VM1760:8 Marks  (3) [90, 88, 77] true
+VM1760:10 Uncaught ReferenceError: marks is not defined
+    at Student.total (<anonymous>:10:26)
+    at <anonymous>:1:5
+total @ VM1760:10
+(anonymous) @ VM1776:1
+class Student{
+    constructor(rollno, name, marks){
+        this.rollno = rollno;
+        this.name = name;
+        this.marks = marks;
+    }
+    total(){
+        console.log('Marks ', this.marks, this.marks instanceof Array );
+        let sum = 0;
+        for(let i = 0; i<this.marks.length; i++){
+            sum+=this.marks[i];
+        }
+        return sum;
+    }
+}
+undefined
+var ram =new Student(1001, "Ram",[90,88,77]);
+undefined
+ram.total();
+VM1912:8 Marks  (3) [90, 88, 77] true
+255
+Student.prototype.SCHOOL = 'SRCC';
+'SRCC'
+ram.SCHOOL;
+'SRCC'
+ram.__proto__;
+{SCHOOL: 'SRCC', constructor: ƒ, total: ƒ}
+ram.__proto__.SCHOOL;
+'SRCC'
+ram.__proto__;
+{SCHOOL: 'SRCC', constructor: ƒ, total: ƒ}
+ram.__proto__ === Student.prototype;
+true
+ram.__proto__ === Student.prototype;
+true
+ram.__proto__ === Object.prototype;
+false
+ram.__proto__.__proto__ === Object.prototype;
+true
+ram.__proto__.__proto__ ;
+{constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}constructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()__proto__: (...)get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+ram.__proto__;
+{SCHOOL: 'SRCC', constructor: ƒ, total: ƒ}
+ram.__proto__.constructor;
+class Student{
+    constructor(rollno, name, marks){
+        this.rollno = rollno;
+        this.name = name;
+        this.marks = marks;
+    }
+    total(){
+        console.log('Marks ', this.marks, this.ma…
+ram.__proto__.__proto__.constructor;
+ƒ Object() { [native code] }
+ram.__proto__.__proto__.__proto__;
+null
+Student;
+class Student{
+    constructor(rollno, name, marks){
+        this.rollno = rollno;
+        this.name = name;
+        this.marks = marks;
+    }
+    total(){
+        console.log('Marks ', this.marks, this.ma…
+console.dir(Student);
+VM2580:1 class Studentlength: 3name: "Student"prototype: {SCHOOL: 'SRCC', constructor: ƒ, total: ƒ}arguments: (...)caller: (...)[[FunctionLocation]]: VM1912:2[[Prototype]]: ƒ ()[[Scopes]]: Scopes[2]
+undefined
+Student.name;
+'Student'
+Student.__proto__;
+ƒ () { [native code] }
+console.dir(Student.__proto__);
+VM2715:1 ƒ anonymous()apply: ƒ apply()arguments: (...)bind: ƒ bind()call: ƒ call()caller: (...)constructor: ƒ Function()length: 0name: ""toString: ƒ toString()Symbol(Symbol.hasInstance): ƒ [Symbol.hasInstance]()get arguments: ƒ ()set arguments: ƒ ()get caller: ƒ ()set caller: ƒ ()[[FunctionLocation]]: ​[[Prototype]]: Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()__proto__: (...)get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()[[Scopes]]: Scopes[0]
+undefined
+typeof Student.__proto__;
+'function'

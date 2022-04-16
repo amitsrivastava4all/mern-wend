@@ -1,0 +1,28 @@
+function Student(rollno, name, marks){
+    this.rollno = rollno;
+    this.name = name;
+    this.marks = marks;
+}
+Student.prototype.total = function (){
+    return this.marks.reduce((tot, mark)=>tot+mark,tot=0);
+}
+Student.prototype.grade = function(){
+    return (this.total()/this.marks.length)>90?"A Grade":"B Grade";
+}
+ƒ (){
+    return (this.total()/this.marks.length)>90?"A Grade":"B Grade";
+}
+typeof Student;
+'function'
+Student.prototype;
+{total: ƒ, grade: ƒ, constructor: ƒ}
+var shyam = new Student(1001, "Shyam",[90,78,100]);
+undefined
+shyam;
+Student {rollno: 1001, name: 'Shyam', marks: Array(3)}marks: (3) [90, 78, 100]name: "Shyam"rollno: 1001[[Prototype]]: Objectgrade: ƒ ()total: ƒ ()constructor: ƒ Student(rollno, name, marks)[[Prototype]]: Object
+shyam.total();
+268
+shyam.grade();
+'B Grade'
+shyam.__proto__ === Student.prototype;
+true
