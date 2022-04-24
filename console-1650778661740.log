@@ -1,0 +1,19 @@
+console.log("I am Sync ");
+console.log("I am Sync2 ");
+VM188:1 I am Sync 
+VM188:2 I am Sync2 
+undefined
+console.log("I am Sync ");
+setTimeout(()=>console.log('I am Async '), 4000);
+console.log("I am Sync2 ");
+VM329:1 I am Sync 
+VM329:3 I am Sync2 
+undefined
+VM329:2 I am Async 
+console.log("I am Sync ");
+setTimeout(()=>console.log('I am Async '), 0);
+console.log("I am Sync2 ");
+VM339:1 I am Sync 
+VM339:3 I am Sync2 
+undefined
+VM339:2 I am Async 
