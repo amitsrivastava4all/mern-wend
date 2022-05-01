@@ -1,0 +1,38 @@
+console.log("Start ");
+var z = doWork();  // LHS = RHS // CALL + WAIT  + RETURN 
+console.log('Z is ',z);
+function doWork(){
+setTimeout(()=>{
+    console.log("I am the CallBack Fn of setTime out ");
+    return 1000;
+}, 4000);
+// return undefined;
+}
+console.log("End ");
+VM939:1 Start 
+VM939:3 Z is  undefined
+VM939:11 End 
+undefined
+VM939:6 I am the CallBack Fn of setTime out 
+console.log("Start ");
+function callBack(result){
+    console.log('Result ', result);
+}
+doWork(callBack); // Call and Pass CallBack Fn + Forget + CallBack
+//var z = doWork();  // LHS = RHS // CALL + WAIT  + RETURN 
+console.log('Z is ',z);
+function doWork(fn){
+setTimeout(()=>{
+    console.log("I am the CallBack Fn of setTime out ");
+    fn(1000);
+    //return 1000;
+}, 4000);
+// return undefined;
+}
+console.log("End ");
+VM1429:1 Start 
+VM1429:7 Z is  undefined
+VM1429:16 End 
+undefined
+VM1429:10 I am the CallBack Fn of setTime out 
+VM1429:3 Result  1000

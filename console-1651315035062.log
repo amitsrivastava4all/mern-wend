@@ -1,0 +1,210 @@
+function order(){
+    var promise  = new Promise((resolve , reject)=>{
+        setTimeout(()=>{
+            resolve("I am Done ");
+        }, 5000);
+    });
+    return promise;
+}
+undefined
+var p = order();
+console.log(p);
+VM676:2 Promise {<pending>}
+undefined
+var p = order();
+console.log(p);
+p.then(data=>console.log('Data ', data)).catch(err=>console.log('Error is ',err));
+VM1074:2 Promise {<pending>}
+Promise {<pending>}
+VM1074:3 Data  I am Done 
+function order(){
+    var promise  = new Promise((resolve , reject)=>{
+        setTimeout(()=>{
+            reject("I am Not Done ");
+        }, 5000);
+    });
+    return promise;
+}
+undefined
+var p = order();
+console.log(p);
+p.then(data=>console.log('Data ', data)).catch(err=>console.log('Error is ',err));
+VM1113:2 Promise {<pending>}
+Promise {<pending>}
+VM1113:3 Error is  I am Not Done 
+var p = order();
+console.log(p);
+p.then(data=>console.log('Data ', data)).catch(err=>console.log('Error is ',err)).finally(()=>console.log('Resource Clean Up....'));
+VM1269:2 Promise {<pending>}
+Promise {<pending>}
+VM1269:3 Error is  I am Not Done 
+VM1269:3 Resource Clean Up....
+function order(){
+    var promise  = new Promise((resolve , reject)=>{
+        setTimeout(()=>{
+            
+            reject("I am Not Done ");
+        }, 5000);
+    });
+    return promise;
+}
+undefined
+function cube(num){
+    const promise = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            if(num<=9){
+            resolve(num**3),5000);
+            }
+            else{
+                reject("Number is Greater 9 ");
+            }
+        }
+    });
+    return promise;
+    
+}
+VM1852:5 Uncaught SyntaxError: Unexpected token ')'
+function cube(num){
+    const promise = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            if(num<=9){
+            resolve(num**3),5000);
+            }
+            else{
+                reject("Number is Greater 9 ");
+            }
+        });
+    });
+    return promise;
+    
+}
+VM1872:5 Uncaught SyntaxError: Unexpected token ')'
+function cube(num){
+    const promise = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            if(num<=9){
+            resolve((num**3),5000);
+            }
+            else{
+                reject("Number is Greater 9 ");
+            }
+        });
+    });
+    return promise;
+    
+}
+undefined
+var p = Promise.all([cube(3), cube(4), cube(5)]);
+p.then(data=>console.log('Data is ',data)).catch(err=>console.log('error ',err));
+Promise {<pending>}
+VM2390:2 Data is  (3) [27, 64, 125]
+function cube(num){
+    const promise = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            if(num<=9){
+            resolve(num**3);
+            }
+            else{
+                reject("Number is Greater 9 ");
+            }
+        }, 5000);
+    });
+    return promise;
+    
+}
+undefined
+var p = Promise.all([cube(3), cube(4), cube(5)]);
+p.then(data=>console.log('Data is ',data)).catch(err=>console.log('error ',err));
+Promise {<pending>}
+VM2437:2 Data is  (3) [27, 64, 125]
+var p = Promise.all([cube(3), cube(4), cube(15)]);
+p.then(data=>console.log('Data is ',data)).catch(err=>console.log('error ',err));
+Promise {<pending>}
+VM2445:2 error  Number is Greater 9 
+var p = Promise.allSettled([cube(3), cube(4), cube(15)]);
+p.then(data=>console.log('Data is ',data)).catch(err=>console.log('error ',err));
+Promise {<pending>}
+VM2473:2 Data is  (3) [{…}, {…}, {…}]0: {status: 'fulfilled', value: 27}1: {status: 'fulfilled', value: 64}2: {status: 'rejected', reason: 'Number is Greater 9 '}length: 3[[Prototype]]: Array(0)
+var p = Promise.any([cube(3), cube(4), cube(15)]);
+p.then(data=>console.log('Data is ',data)).catch(err=>console.log('error ',err));
+Promise {<pending>}
+VM2491:2 Data is  27
+var p = Promise.any([cube(3), cube(4), cube(15)]);
+p.then(data=>console.log('Data is ',data)).catch(err=>console.log('error ',err));
+Promise {<pending>}
+VM2495:2 Data is  27
+function cube(num){
+    const promise = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            if(num>3){
+            resolve((num**3),5000);
+            }
+            else{
+                reject("Number is Less than 4 ");
+            }
+        });
+    });
+    return promise;
+    
+}
+undefined
+var p = Promise.any([cube(3), cube(4), cube(15)]);
+p.then(data=>console.log('Data is ',data)).catch(err=>console.log('error ',err));
+Promise {<pending>}
+VM2576:2 Data is  64
+function cube(num){
+    const promise = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            if(num>3){
+            resolve((num**3));
+            }
+            else{
+                reject("Number is Less than 4 ");
+            }
+        }, 5000);
+    });
+    return promise;
+    
+}
+undefined
+var p = Promise.any([cube(3), cube(4), cube(15)]);
+p.then(data=>console.log('Data is ',data)).catch(err=>console.log('error ',err));
+Promise {<pending>}
+VM2624:2 Data is  64
+var p = Promise.race([cube(3), cube(4), cube(15)]);
+p.then(data=>console.log('Data is ',data)).catch(err=>console.log('error ',err));
+Promise {<pending>}
+VM2642:2 error  Number is Less than 4 
+function total(){
+   let total =  await cube(4) + await cube(5) + await cube(6);
+    console.log('Total is ', total);
+}
+VM3042:2 Uncaught SyntaxError: await is only valid in async functions and the top level bodies of modules
+async function total(){
+   let total =  await cube(4) + await cube(5) + await cube(6);
+    console.log('Total is ', total);
+}
+undefined
+async function total(){
+   let tot =  await cube(4) + await cube(5) + await cube(6);
+    console.log('Total is ', tot);
+}
+undefined
+total();
+Promise {<pending>}
+VM3131:3 Total is  405
+var d = total();
+console.log("D is ",d);
+VM3279:2 D is  Promise {<pending>}
+undefined
+VM3131:3 Total is  405
+async function total(){
+   let tot =  await cube(4) + await cube(5) + await cube(6);
+    //console.log('Total is ', tot);
+    return tot;
+}
+undefined
+var e = total();
+e.then(data=>console.log(data)).catch(err=>console.log('Error is ',err));
+Promise {<pending>}
+VM3709:2 405
